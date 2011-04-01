@@ -1,8 +1,10 @@
 *.pyc
-.class
+*.class
 *.jar
 *~
 *.swp
 *.swo
 *.6
+*.8
 *.out
+*.exe
