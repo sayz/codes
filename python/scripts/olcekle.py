@@ -74,7 +74,7 @@ def main():
 		print vers()
 	else:
 		try:
-			os.mkdir("./" + default_dir)
+			os.mkdir(default_dir)
 			olcekle(images, default_dir)
 		except OSError:
 			evha = raw_input(default_dir + " dizini zaten var, ölçeklenen dosyalar bu dizine kaydedilsin mi(E/h)?")
@@ -82,6 +82,7 @@ def main():
 				olcekle(images, default_dir)
 			elif evha == "H" or evha == "h":
 				nondef_dir = raw_input("istediğiniz dizinin adını giriniz>")
+				os.mkdir(nondef_dir)
 				olcekle(images, nondef_dir)
 
 
