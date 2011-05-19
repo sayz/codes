@@ -8,7 +8,7 @@ detail = False
 
 
 def vers():
-	return "olcekle1.0"
+	return "olcekle1.1"
 
 
 def yardim():
@@ -16,10 +16,10 @@ def yardim():
 	kullanmadan önce:
 		chmod +x olcekle.py
 
-	komutlar:
-		-h --- bu metni görüntüler
-		-v --- ayrıntılı gösterir
-		-s --- sürüm gösterir
+	seçenekler:
+		-h, --help	--- bu yardım metnini gösterir ve çıkar
+		-v, --verbose	--- ne yapıldığını gösterir
+		    --versiyon 	--- sürüm bilgisini gösterir ve çıkar
 
 	kullanım:
 		./olcekle.py [file ..]
@@ -46,15 +46,16 @@ def olcekle(images, dir):
 			im2 = im1.resize((width / 4, height / 4))
 			if detail:
 				print basename + " işleniyor..."
-				im2.save(dir + "/" + base + "-o" + ext.lower())
-				print "işlendi"
+				newname = dir + "/" + base + "-o" + ext.lower()
+				im2.save(newname)
+				print "işlendi ve --" + newname + "-- olarak kaydedildi"
 			else:
-				im2.save(dir + "/" + base + "-o" + ext.lower())
+				im2.save(newname)
 		except IOError:
 			if detail:
-				print "verilen -->" + basename + "<-- dosyası bir resim dosyası değil!!!"
+				print "verilen --" + basename + "-- dosyası bir resim dosyası değil!!!"
 			else:
-				pass
+				continue
 		i = i + 1
 
 
@@ -65,12 +66,13 @@ def main():
 	if len(sys.argv) == 1:
 		print  "yardım için ----> $./olcekle.py -h"
 		exit(0)
-	if sys.argv[1] == "-v":
+	opt = sys.argv[1]
+	if opt == "-v" or opt == "--verbose":
 		detail = True
 		images = sys.argv[1:]
-	if sys.argv[1] == "-h":
+	if opt == "-h" or opt == "--help":
 		print yardim()
-	elif sys.argv[1] == "-s":
+	elif opt == "--version":
 		print vers()
 	else:
 		try:
