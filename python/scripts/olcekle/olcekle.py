@@ -44,9 +44,9 @@ def olcekle(images, dir):
 			width = im1.size[0]
 			height = im1.size[1]
 			im2 = im1.resize((width / 4, height / 4))
+			newname = dir + "/" + base + "-o" + ext.lower()
 			if detail:
 				print basename + " işleniyor..."
-				newname = dir + "/" + base + "-o" + ext.lower()
 				im2.save(newname)
 				print "işlendi ve --" + newname + "-- olarak kaydedildi"
 			else:
