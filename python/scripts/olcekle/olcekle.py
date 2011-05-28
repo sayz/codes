@@ -80,9 +80,9 @@ def main():
 			olcekle(images, default_dir)
 		except OSError:
 			evha = raw_input(default_dir + " dizini zaten var, ölçeklenen dosyalar bu dizine kaydedilsin mi(E/h)?")
-			if evha == "E" or evha == "e" or evha == "":
+			if evha in "Ee ":
 				olcekle(images, default_dir)
-			elif evha == "H" or evha == "h":
+			elif evha in "Hh":
 				nondef_dir = raw_input("istediğiniz dizinin adını giriniz>")
 				os.mkdir(nondef_dir)
 				olcekle(images, nondef_dir)
