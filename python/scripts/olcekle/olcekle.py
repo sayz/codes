@@ -8,7 +8,7 @@ detail = False
 
 
 def vers():
-	return "olcekle1.1"
+	return "olcekle1.2"
 
 
 def yardim():

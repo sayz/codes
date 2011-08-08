@@ -120,7 +120,7 @@ def iskelet():
         while True:
             yk = yeni_konum(gr_size, hunter, prey)
             hunter, prey = yk[0], yk[1]
-            ehc = raw_input("devam mı?:")
+            ehc = raw_input("devam mı?((e)vet)/(h)ayır:")
             if ehc == "e":
                 grid_ciz(gr_size, hunter, prey)
                 if hunter == prey:
