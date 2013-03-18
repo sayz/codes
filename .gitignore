@@ -1,5 +1,3 @@
-*.pyc
-*.class
 *.jar
 *~
 *.swp
@@ -8,3 +6,17 @@
 *.8
 *.out
 *.exe
+
+#python specific
+*.pyc
+
+#java specific
+*.class
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
