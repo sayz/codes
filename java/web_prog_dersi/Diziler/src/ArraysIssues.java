@@ -1,6 +1,6 @@
 /**
 * 
-* @author Sefa Yıldız - It coded fro web programming lab.
+* @author Sefa Yıldız - It coded for web programming class.
 * 
 */
 
