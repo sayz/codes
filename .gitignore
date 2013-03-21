@@ -20,3 +20,7 @@
 *.swp
 *.out
 
+# Eclipse project files
+.classpath
+.project
+
