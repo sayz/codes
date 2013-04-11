@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- 
+Front end to servlet that generates images.
+-->
+<HTML>
+<HEAD><TITLE>JPEG Generation Service</TITLE></HEAD>
+<BODY BGCOLOR="#FDF5E6">
+<H1 ALIGN="CENTER">JPEG Generation Service</H1>
+<P>
+Welcome to the <I>free</I> trial edition of our JPEG
+generation service. Enter a message, a font name,
+and a font size below, then submit the form. You will
+be returned a JPEG image showing the message in the 
+designated font, with an oblique "shadow" of the message
+behind it. Once you get an image you are satisfied with, 
+right-click on it (or click while holding down the SHIFT key) 
+to save it to your local disk.
+</P><P>
+The server is currently on Windows, so the font name must
+be either a standard Java font name (e.g., Serif, SansSerif,
+or Monospaced) or a Windows font name (e.g., Arial Black).
+Unrecognized font names will revert to Serif. Press the
+"Show Font List" button for a complete list.
+</P>
+<FORM ACTION="shadowed-text">
+  <CENTER>
+    Message: 
+    <INPUT TYPE="TEXT" NAME="message"><BR>
+    Font name:
+    <INPUT TYPE="TEXT" NAME="fontName" VALUE="Serif"><BR>
+    Font size:
+    <INPUT TYPE="TEXT" NAME="fontSize" VALUE="90"><BR>
+    <INPUT TYPE="SUBMIT" VALUE="Build Image"><BR>
+    <INPUT TYPE="SUBMIT" NAME="showList" VALUE="Show Font List">
+  </CENTER>
+</FORM>
+
+</BODY></HTML>
